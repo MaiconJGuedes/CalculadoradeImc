@@ -33,7 +33,9 @@ body {
   background-color: #040924;
 }
 
-body, input, button{
+body,
+input,
+button {
   font-size: 1.6rem;
   line-height: 2rem;
 }
@@ -54,21 +56,21 @@ body, input, button{
   border-radius: .6rem;
 }
 
-.title{
+.title {
   font-size: 3.2rem;
   line-height: 4rem;
   color: var(--tt-heading);
 }
 
-form{
+form {
   width: 30rem;
 }
 
-form h1{
+form h1 {
   margin-bottom: 3.2rem;
 }
 
-form label{
+form label {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: var(--tt-label);
@@ -76,7 +78,7 @@ form label{
   display: block;
 }
 
-form input{
+form input {
   width: 100%;
   border: 1px solid var(--bd-input);
   background: var(--bg-input);
@@ -84,19 +86,19 @@ form input{
   border-radius: .4rem;
 }
 
-form input:focus{
+form input:focus {
   outline: 2px solid var(--ot-input);
 }
 
-fomr input::placeholder{
+fomr input::placeholder {
   color: var(--tt-placeholder);
 }
 
-.input-wrapper + .input-wrapper{ 
+.input-wrapper+.input-wrapper {
   margin-top: 1.6rem;
 }
 
-button{
+form button {
   margin-top: 3.2rem;
   padding: 1.6rem;
   width: 100%;
@@ -117,6 +119,45 @@ button{
 
 }
 
-button:hover{
+form button:hover {
   background-color: var(--bg-buttonHover);
+}
+
+.modal-wrapper.open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+.modal{
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+
+  transition: transform 3.s
+}
+
+
+.modal button:hover{
+  transform: scale(1.1);
 }
